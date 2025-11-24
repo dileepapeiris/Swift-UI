@@ -27,8 +27,30 @@ let monthlySales: [SalesData] = [
 struct ContentView: View {
     var body: some View {
         VStack {
+            Text("Monthly Sales Report")
+                .font(.title)
+                .padding()
+
+            // Chart
+            Chart {
+               // Loop
+                ForEach(monthlySales) { data in
+                    BarMark(
+                        // X-axis
+                        x: .value("Month", data.month),
+                        // Y-axis
+                        y: .value("Sales", data.sales)
+                    )
+                    // Chart stylings
+                    .foregroundStyle(.blue.gradient)
+                    
+                }
+            }
+            .chartXAxisLabel("Month") // X-axis title
+            .chartYAxisLabel("Sales") // Y-axis title
+            .frame(height: 300) // Height of the chart
+            .padding()
         }
-        .padding()
     }
 }
 
