@@ -60,3 +60,27 @@ struct Pie3DView: View {
         return .degrees(sum / total * 360)
     }
 }
+
+struct PieSlice3D: View {
+    let startAngle: Angle
+    let endAngle: Angle
+    let color: Color
+    let depth: CGFloat = 30
+    
+    var body: some View {
+        ZStack {
+            // Extrusion (Sides)
+            ForEach(0..<Int(depth), id: \.self) { i in
+                PieSliceShape(startAngle: startAngle, endAngle: endAngle)
+                    .fill(color.opacity(0.6))
+                    .offset(z: -CGFloat(i))
+            }
+            
+            // Top Face
+            PieSliceShape(startAngle: startAngle, endAngle: endAngle)
+                .fill(color)
+                .shadow(radius: 2)
+        }
+    }
+}
+
