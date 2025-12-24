@@ -40,3 +40,35 @@ struct Bar3DView: View {
     }
 }
 
+struct Bar3D: View {
+    let value: Double
+    let color: Color
+    let depth: CGFloat = 20
+    
+    var body: some View {
+        ZStack {
+            // Right Side
+            Rectangle()
+                .fill(color.opacity(0.7))
+                .frame(width: depth, height: CGFloat(value * 2))
+                .rotation3DEffect(.degrees(90), axis: (x: 0, y: 1, z: 0), anchor: .trailing)
+                .offset(x: -depth/2)
+            
+            // Top Side
+            Rectangle()
+                .fill(color.opacity(0.9))
+                .frame(width: 40, height: depth)
+                .rotation3DEffect(.degrees(-90), axis: (x: 1, y: 0, z: 0), anchor: .top)
+                .offset(y: -CGFloat(value))
+            
+            // Front Face
+            Rectangle()
+                .fill(color)
+                .frame(width: 40, height: CGFloat(value * 2))
+        }
+    }
+}
+
+#Preview {
+    Bar3DView(data: ChartData.mockBarData)
+}
