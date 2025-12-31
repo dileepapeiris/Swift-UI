@@ -67,4 +67,12 @@ struct PieSlice3D: View {
     let color: Color
     let depth: CGFloat = 30
     
+    var body: some View {
+        ZStack {
+            // Extrusion (Sides)
+            ForEach(0..<Int(depth), id: \.self) { i in
+                PieSliceShape(startAngle: startAngle, endAngle: endAngle)
+                    .fill(color.opacity(0.6))
+                    .offset(y: -CGFloat(i))
+            }
 }
