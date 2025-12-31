@@ -16,4 +16,11 @@ extension ChartData {
         ChartData(category: "Apr", value: 91, color: .green),
         ChartData(category: "May", value: 65, color: .orange)
     ]
+    
+    static let mockPieData: [ChartData] = [
+        ChartData(category: "Product A", value: 35, color: .pink),
+        ChartData(category: "Product B", value: 25, color: .orange),
+        ChartData(category: "Product C", value: 40, color: .purple)
+    ]
+}
 }
