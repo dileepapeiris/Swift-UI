@@ -20,6 +20,15 @@ struct ContentView: View {
                     }
                 }
                 
+                Section(header: Text("Learning Resources")) {
+                    Link(destination: URL(string: "https://developer.apple.com/documentation/swiftui/charts")!) {
+                        Label("SwiftUI Charts Documentation", systemImage: "link")
+                    }
+                    Link(destination: URL(string: "https://developer.apple.com/documentation/scenekit")!) {
+                        Label("SceneKit Documentation", systemImage: "link")
+                    }
+                }
+            }
     }
 }
 }
