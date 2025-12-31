@@ -75,4 +75,12 @@ struct PieSlice3D: View {
                     .fill(color.opacity(0.6))
                     .offset(y: -CGFloat(i))
             }
+            
+            // Top Face
+            PieSliceShape(startAngle: startAngle, endAngle: endAngle)
+                .fill(color)
+                .shadow(radius: 2)
+        }
+    }
+}
 }
