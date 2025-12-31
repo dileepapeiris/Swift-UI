@@ -32,4 +32,9 @@ struct Surface3DView: View {
     private func createScene() -> SCNScene {
         let scene = SCNScene()
         
+        // Add a floor or base
+        let surfaceNode = SCNNode()
+        let size: Int = 20
+        let step: Float = 0.5
+        
     }
