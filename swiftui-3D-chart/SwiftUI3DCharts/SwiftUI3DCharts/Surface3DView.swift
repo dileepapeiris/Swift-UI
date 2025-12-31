@@ -62,4 +62,5 @@ struct Surface3DView: View {
         // Add a camera
         let cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
+        cameraNode.position = SCNVector3(x: 10, y: 10, z: 10)
     }
