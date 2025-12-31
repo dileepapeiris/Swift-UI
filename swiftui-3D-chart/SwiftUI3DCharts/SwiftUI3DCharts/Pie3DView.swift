@@ -29,4 +29,7 @@ struct Pie3DView: View {
                         rotation = Double(max(0, min(80, 45 + value.translation.height / 5)))
                     }
             )
+            
+            Spacer()
+            
 }
