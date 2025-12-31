@@ -21,4 +21,12 @@ struct Pie3DView: View {
                     )
                 }
             }
+            .frame(width: 300, height: 300)
+            .rotation3DEffect(.degrees(rotation), axis: (x: 1, y: 0, z: 0))
+            .gesture(
+                DragGesture()
+                    .onChanged { value in
+                        rotation = Double(max(0, min(80, 45 + value.translation.height / 5)))
+                    }
+            )
 }
