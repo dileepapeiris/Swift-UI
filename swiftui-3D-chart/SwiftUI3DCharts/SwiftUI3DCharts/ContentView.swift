@@ -29,6 +29,9 @@ struct ContentView: View {
                     }
                 }
             }
+            .navigationTitle("Swift 3D Charts")
+            .listStyle(InsetGroupedListStyle())
+        }
     }
 }
 }
