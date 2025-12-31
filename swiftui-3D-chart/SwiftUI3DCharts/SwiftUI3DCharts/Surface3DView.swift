@@ -13,4 +13,6 @@ struct Surface3DView: View {
                 pointOfView: nil,
                 options: [.allowsCameraControl, .autoenablesDefaultLighting]
             )
+            .edgesIgnoringSafeArea(.all)
+            .background(Color.black)
     }
