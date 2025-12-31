@@ -9,4 +9,7 @@ struct Pie3DView: View {
             Text("3D Pie Chart")
                 .font(.title2).bold()
                 .padding(.top)
+            
+            Spacer()
+            
 }
