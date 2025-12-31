@@ -31,3 +31,11 @@ struct Bar3DView: View {
             
             Spacer()
             
+            Text("Drag to rotate and tilt")
+                .font(.caption)
+                .foregroundColor(.secondary)
+                .padding(.bottom)
+        }
+        .padding()
+    }
+}
