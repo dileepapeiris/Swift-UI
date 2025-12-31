@@ -37,4 +37,9 @@ struct Surface3DView: View {
         let size: Int = 20
         let step: Float = 0.5
         
+        for i in 0..<size {
+            for j in 0..<size {
+                let x = Float(i) * step - Float(size) * step / 2
+                let z = Float(j) * step - Float(size) * step / 2
+                
     }
