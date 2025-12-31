@@ -64,4 +64,6 @@ struct Surface3DView: View {
         cameraNode.camera = SCNCamera()
         cameraNode.position = SCNVector3(x: 10, y: 10, z: 10)
         cameraNode.look(at: SCNVector3(0, 0, 0))
+        scene.rootNode.addChildNode(cameraNode)
+        
     }
