@@ -57,4 +57,6 @@ struct Surface3DView: View {
             }
         }
         
+        scene.rootNode.addChildNode(surfaceNode)
+        
     }
