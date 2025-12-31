@@ -12,4 +12,13 @@ struct Pie3DView: View {
             
             Spacer()
             
+            ZStack {
+                ForEach(0..<data.count, id: \.self) { index in
+                    PieSlice3D(
+                        startAngle: startAngle(for: index),
+                        endAngle: endAngle(for: index),
+                        color: data[index].color
+                    )
+                }
+            }
 }
