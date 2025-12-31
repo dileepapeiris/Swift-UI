@@ -15,4 +15,7 @@ struct Surface3DView: View {
             )
             .edgesIgnoringSafeArea(.all)
             .background(Color.black)
+            .overlay(
+                VStack {
+                    Spacer()
     }
