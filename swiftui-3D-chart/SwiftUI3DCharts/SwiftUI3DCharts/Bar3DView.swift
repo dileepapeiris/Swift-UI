@@ -69,4 +69,6 @@ struct Bar3D: View {
     }
 }
 
+#Preview {
+    Bar3DView(data: ChartData.mockBarData)
 }
