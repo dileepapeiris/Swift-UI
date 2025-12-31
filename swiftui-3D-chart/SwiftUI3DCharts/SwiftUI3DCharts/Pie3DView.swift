@@ -61,4 +61,10 @@ struct Pie3DView: View {
     }
 }
 
+struct PieSlice3D: View {
+    let startAngle: Angle
+    let endAngle: Angle
+    let color: Color
+    let depth: CGFloat = 30
+    
 }
