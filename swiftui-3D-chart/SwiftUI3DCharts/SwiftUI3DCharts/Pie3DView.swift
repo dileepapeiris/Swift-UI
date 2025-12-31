@@ -47,4 +47,11 @@ struct Pie3DView: View {
             .padding()
         }
     }
+    
+    private func startAngle(for index: Int) -> Angle {
+        let total = data.map { $0.value }.reduce(0, +)
+        let sum = data.prefix(index).map { $0.value }.reduce(0, +)
+        return .degrees(sum / total * 360)
+    }
+    
 }
