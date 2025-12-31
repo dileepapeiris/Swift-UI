@@ -32,4 +32,14 @@ struct Pie3DView: View {
             
             Spacer()
             
+            VStack(alignment: .leading, spacing: 10) {
+                ForEach(data) { item in
+                    HStack {
+                        Circle().fill(item.color).frame(width: 12, height: 12)
+                        Text(item.category).font(.subheadline)
+                        Spacer()
+                        Text("\(Int(item.value))%").font(.subheadline).bold()
+                    }
+                }
+            }
 }
