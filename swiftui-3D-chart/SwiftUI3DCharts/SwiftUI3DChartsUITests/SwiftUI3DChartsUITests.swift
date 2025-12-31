@@ -33,6 +33,8 @@ final class SwiftUI3DChartsUITests: XCTestCase {
 
     @MainActor
     func testLaunchPerformance() throws {
+        // This measures how long it takes to launch your application.
+        measure(metrics: [XCTApplicationLaunchMetric()]) {
         }
     }
 }
