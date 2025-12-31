@@ -19,3 +19,13 @@ struct Bar3DView: View {
                         .frame(width: 40)
                 }
             }
+            .rotation3DEffect(.degrees(rotation), axis: (x: 0, y: 1, z: 0))
+            .rotation3DEffect(.degrees(tilt), axis: (x: 1, y: 0, z: 0))
+            .gesture(
+                DragGesture()
+                    .onChanged { value in
+                        rotation = Double(value.translation.width / 5)
+                        tilt = Double(value.translation.height / 5)
+                    }
+            )
+            
