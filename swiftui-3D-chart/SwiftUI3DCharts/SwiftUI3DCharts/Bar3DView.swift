@@ -11,3 +11,5 @@ struct Bar3DView: View {
                 .font(.title2).bold()
                 .padding(.top)
             
+            Spacer()
+            
