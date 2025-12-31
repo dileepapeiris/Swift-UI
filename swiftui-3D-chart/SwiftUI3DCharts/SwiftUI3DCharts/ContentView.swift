@@ -9,6 +9,11 @@ struct ContentView: View {
                         Label("3D Bar Chart", systemImage: "chart.bar.fill")
                     }
                     
+                    NavigationLink(destination: Pie3DView(data: ChartData.mockPieData)) {
+                        Label("3D Pie Chart", systemImage: "chart.pie.fill")
+                    }
+                }
+                
     }
 }
 }
