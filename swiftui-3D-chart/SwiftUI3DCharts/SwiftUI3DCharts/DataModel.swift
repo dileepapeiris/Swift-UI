@@ -23,4 +23,10 @@ extension ChartData {
         ChartData(category: "Product C", value: 40, color: .purple)
     ]
 }
+
+struct SurfacePoint: Identifiable {
+    let id = UUID()
+    let x: Float
+    let y: Float
+    let z: Float
 }
