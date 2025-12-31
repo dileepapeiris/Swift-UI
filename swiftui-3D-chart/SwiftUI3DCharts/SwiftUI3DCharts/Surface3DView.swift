@@ -53,4 +53,8 @@ struct Surface3DView: View {
                 
                 let node = SCNNode(geometry: box)
                 node.position = SCNVector3(x, Float(y)/2, z)
+                surfaceNode.addChildNode(node)
+            }
+        }
+        
     }
