@@ -50,4 +50,7 @@ struct Surface3DView: View {
                 // Color based on height
                 let hue = CGFloat((y + 1) / 2) * 0.7 + 0.5 // From blue to purple/pink
                 box.firstMaterial?.diffuse.contents = Color(hue: hue, saturation: 0.8, brightness: 1.0)
+                
+                let node = SCNNode(geometry: box)
+                node.position = SCNVector3(x, Float(y)/2, z)
     }
