@@ -13,3 +13,9 @@ struct Bar3DView: View {
             
             Spacer()
             
+            HStack(alignment: .bottom, spacing: 20) {
+                ForEach(data) { item in
+                    Bar3D(value: item.value, color: item.color)
+                        .frame(width: 40)
+                }
+            }
