@@ -99,4 +99,7 @@ struct PieSliceShape: Shape {
         return path
     }
 }
+
+#Preview {
+    Pie3DView(data: ChartData.mockPieData)
 }
