@@ -28,4 +28,8 @@ struct Surface3DView: View {
             )
         }
     }
+    
+    private func createScene() -> SCNScene {
+        let scene = SCNScene()
+        
     }
