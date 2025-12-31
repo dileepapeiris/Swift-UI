@@ -45,4 +45,12 @@ struct Bar3D: View {
     let color: Color
     let depth: CGFloat = 20
     
+    var body: some View {
+        ZStack {
+            // Right Side
+            Rectangle()
+                .fill(color.opacity(0.7))
+                .frame(width: depth, height: CGFloat(value * 2))
+                .rotation3DEffect(.degrees(90), axis: (x: 0, y: 1, z: 0), anchor: .trailing)
+                .offset(x: -depth/2)
 }
