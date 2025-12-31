@@ -7,4 +7,10 @@ struct Surface3DView: View {
             Text("3D Surface Plot")
                 .font(.title2).bold()
                 .padding(.top)
+            
+            SceneView(
+                scene: createScene(),
+                pointOfView: nil,
+                options: [.allowsCameraControl, .autoenablesDefaultLighting]
+            )
     }
