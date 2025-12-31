@@ -18,4 +18,14 @@ struct Surface3DView: View {
             .overlay(
                 VStack {
                     Spacer()
+                    Text("Interactive SceneKit Surface - Rotate/Zoom with gestures")
+                        .font(.caption)
+                        .padding()
+                        .background(Color(.systemBackground).opacity(0.7))
+                        .cornerRadius(10)
+                        .padding()
+                }
+            )
+        }
+    }
     }
