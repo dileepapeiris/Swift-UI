@@ -83,4 +83,8 @@ struct PieSlice3D: View {
         }
     }
 }
+
+struct PieSliceShape: Shape {
+    let startAngle: Angle
+    let endAngle: Angle
 }
