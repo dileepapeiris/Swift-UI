@@ -59,4 +59,6 @@ struct Surface3DView: View {
         
         scene.rootNode.addChildNode(surfaceNode)
         
+        // Add a camera
+        let cameraNode = SCNNode()
     }
