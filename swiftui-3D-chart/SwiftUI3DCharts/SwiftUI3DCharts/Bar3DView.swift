@@ -39,3 +39,10 @@ struct Bar3DView: View {
         .padding()
     }
 }
+
+struct Bar3D: View {
+    let value: Double
+    let color: Color
+    let depth: CGFloat = 20
+    
+}
