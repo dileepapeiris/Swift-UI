@@ -66,4 +66,10 @@ struct Surface3DView: View {
         cameraNode.look(at: SCNVector3(0, 0, 0))
         scene.rootNode.addChildNode(cameraNode)
         
+        return scene
     }
+}
+
+#Preview {
+    Surface3DView()
+}
