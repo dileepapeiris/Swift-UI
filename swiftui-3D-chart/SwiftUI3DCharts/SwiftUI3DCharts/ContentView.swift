@@ -14,6 +14,12 @@ struct ContentView: View {
                     }
                 }
                 
+                Section(header: Text("SceneKit (Higher Fidelity)")) {
+                    NavigationLink(destination: Surface3DView()) {
+                        Label("3D Surface Plot", systemImage: "square.3.layers.3d.down.right")
+                    }
+                }
+                
     }
 }
 }
