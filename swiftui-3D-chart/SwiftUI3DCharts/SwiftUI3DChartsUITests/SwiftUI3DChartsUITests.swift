@@ -32,5 +32,7 @@ final class SwiftUI3DChartsUITests: XCTestCase {
     }
 
     @MainActor
+    func testLaunchPerformance() throws {
+        }
     }
 }
