@@ -29,3 +29,5 @@ struct Bar3DView: View {
                     }
             )
             
+            Spacer()
+            
