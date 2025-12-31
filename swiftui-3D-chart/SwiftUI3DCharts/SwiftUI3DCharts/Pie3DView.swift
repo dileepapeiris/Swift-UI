@@ -87,4 +87,10 @@ struct PieSlice3D: View {
 struct PieSliceShape: Shape {
     let startAngle: Angle
     let endAngle: Angle
+    
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        let center = CGPoint(x: rect.midX, y: rect.midY)
+        let radius = min(rect.width, rect.height) / 2
+        
 }
