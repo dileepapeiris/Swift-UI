@@ -45,4 +45,5 @@ struct Surface3DView: View {
                 // Mathematical function: sin(x) * cos(z) for a wave effect
                 let y = sin(x) * cos(z)
                 
+                let box = SCNBox(width: CGFloat(step), height: CGFloat(abs(y) + 0.1), length: CGFloat(step), chamferRadius: 0.02)
     }
