@@ -60,4 +60,13 @@ struct Bar3D: View {
                 .frame(width: 40, height: depth)
                 .rotation3DEffect(.degrees(-90), axis: (x: 1, y: 0, z: 0), anchor: .top)
                 .offset(y: -CGFloat(value))
+            
+            // Front Face
+            Rectangle()
+                .fill(color)
+                .frame(width: 40, height: CGFloat(value * 2))
+        }
+    }
+}
+
 }
