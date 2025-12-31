@@ -42,4 +42,7 @@ struct Surface3DView: View {
                 let x = Float(i) * step - Float(size) * step / 2
                 let z = Float(j) * step - Float(size) * step / 2
                 
+                // Mathematical function: sin(x) * cos(z) for a wave effect
+                let y = sin(x) * cos(z)
+                
     }
