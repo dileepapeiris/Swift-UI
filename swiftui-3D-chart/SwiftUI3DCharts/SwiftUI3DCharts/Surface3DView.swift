@@ -46,4 +46,8 @@ struct Surface3DView: View {
                 let y = sin(x) * cos(z)
                 
                 let box = SCNBox(width: CGFloat(step), height: CGFloat(abs(y) + 0.1), length: CGFloat(step), chamferRadius: 0.02)
+                
+                // Color based on height
+                let hue = CGFloat((y + 1) / 2) * 0.7 + 0.5 // From blue to purple/pink
+                box.firstMaterial?.diffuse.contents = Color(hue: hue, saturation: 0.8, brightness: 1.0)
     }
